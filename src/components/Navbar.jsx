@@ -5,21 +5,20 @@ import styles from "../styles/Navbar.module.css";
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <nav className={styles.navbar}>
             <div className={styles.navWrapper}>
                 <Link to="/">
-                    <div className={styles.logo}></div>
+                    <div className={styles.logo} onClick={closeMenu}></div>
                 </Link>
 
-                <div className={`
-                        ${styles.hamburger} 
-                        ${isOpen ? styles.cross : ""}`}
-                     onClick={toggleMenu}
-                ></div>
+                <div className={`${styles.hamburger} ${isOpen && styles.cross}`}
+                     onClick={toggleMenu}>
+                </div>
 
-                <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
+                <ul className={`${styles.navLinks} ${isOpen && styles.open}`}>
                     <li><Link to="/" onClick={toggleMenu}>Главная</Link></li>
                     <li><Link to="/exhibits" onClick={toggleMenu}>Выставка</Link></li>
                     <li><Link to="/tour" onClick={toggleMenu}>Экскурсия</Link></li>
@@ -28,7 +27,9 @@ function Navbar() {
                 </ul>
             </div>
 
-            <div className={`${styles.tint} ${isOpen ? styles.tint : ""}`}></div>
+            <div className={`${styles.overlay} ${isOpen && styles.tint}`}
+                 onClick={toggleMenu}>
+            </div>
         </nav>
     );
 }
