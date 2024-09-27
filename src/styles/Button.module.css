@@ -1,0 +1,27 @@
+.base {
+    padding: 12px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary {
+    border: none;
+}
+
+.primary:hover {
+    background: #cad5e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 189, 0.1);
+}
+
+.outlined {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.outlined:hover {
+    border: 2px solid #cad5e8;
+    color: #cad5e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 189, 0.1);
+}
