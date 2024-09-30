@@ -8,10 +8,7 @@ function Button({ to, label, outlined = false }) {
     return (
         <button
             onClick={() => navigate(to)}
-            className={`
-                ${styles.base} 
-                ${outlined ? styles.outlined : styles.primary}
-            `}
+            className={`${styles.base} ${outlined ? styles.outlined : styles.primary}`}
         >
             {label}
         </button>

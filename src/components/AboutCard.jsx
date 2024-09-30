@@ -16,6 +16,7 @@ function AboutCard({ text, footer, link }) {
             </div>
         </div>
     );
+
 }
 
 AboutCard.propTypes = {

@@ -1,5 +1,9 @@
+import Exhibition from "../sections/Exhibition.jsx";
+
 function Exhibits() {
-    return <h1>Exhibits</h1>
+    return (
+        <Exhibition />
+    );
 }
 
 export default Exhibits;

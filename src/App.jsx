@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 import Navbar from "./components/Navbar.jsx";
 
@@ -12,6 +13,7 @@ function App() {
     return (
         <Router>
             <div>
+                <ScrollToHashElement />
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
