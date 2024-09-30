@@ -1,12 +1,21 @@
 import styles from "../styles/ExhibitCard.module.css";
+import PropTypes from "prop-types";
 
-function ExhibitCard() {
+function ExhibitCard({ name, text, img }) {
+    const source = `/exhibits/${img}.png`;
     return (
         <div className={styles.card}>
-            <div className={styles.image}></div>
-            <h1>Название экспоната</h1>
+            <img src={source} alt={name} className={styles.image} />
+            <h1 className={styles.heading}>{name}</h1>
+            <p>{text}</p>
         </div>
     );
 }
+
+ExhibitCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+};
 
 export default ExhibitCard;

@@ -7,8 +7,11 @@
 .item1 { order: 1; }
 .item2 { order: 2; }
 .item3 { order: 3; }
-.itemImg { order: 4; }
 .item4 { order: 5; }
+.itemImg {
+    order: 4;
+    border: 1px solid #b1c7f6;
+}
 
 @media screen and (width <= 780px) {
     .gridContainer {

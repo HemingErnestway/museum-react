@@ -3,6 +3,7 @@
     border-radius: 16px;
     padding: 16px;
     min-width: 210px;
+    border: 1px solid #b1c7f6;
 }
 
 .card:nth-child(2) {

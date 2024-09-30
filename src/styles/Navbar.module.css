@@ -39,7 +39,7 @@
 }
 
 .logo {
-    background-image: url("../assets/logotype-big.svg");
+    background-image: url("../assets/icons/logotype-big.svg");
     -webkit-background-size: cover;
     background-size: cover;
     width: 174px;
@@ -49,7 +49,7 @@
 .hamburger {
     width: 36px;
     height: 36px;
-    background-image: url("../assets/menu.svg");
+    background-image: url("../assets/icons/menu.svg");
     -webkit-background-size: cover;
     background-size: cover;
     flex-direction: column;
@@ -63,7 +63,7 @@
 }
 
 .cross {
-    background-image: url("../assets/close.svg");
+    background-image: url("../assets/icons/close.svg");
 }
 
 .overlay {

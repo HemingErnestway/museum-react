@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
+import ScrollToTop from "./scrollToTop.js";
 
 import Navbar from "./components/Navbar.jsx";
 
@@ -12,6 +13,7 @@ import Documents from "./pages/Documents.jsx";
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <div>
                 <ScrollToHashElement />
                 <Navbar />

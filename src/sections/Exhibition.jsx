@@ -7,14 +7,31 @@ function Exhibition() {
             <div className="wrapper">
                 <h1 className="section-heading">Экспонаты</h1>
                 <div className={styles.gridContainer}>
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
-                    <ExhibitCard />
+                    <ExhibitCard
+                        name="Макет ЯГТУ"
+                        text="Рукотворный макет, на котором показано плановое размещение корпусов университета."
+                        img="4"
+                    />
+                    <ExhibitCard
+                        name="Макет ЯГТУ"
+                        text="Рукотворный макет, на котором показано плановое размещение корпусов университета."
+                        img="4"
+                    />
+                    <ExhibitCard
+                        name="Макет ЯГТУ"
+                        text="Рукотворный макет, на котором показано плановое размещение корпусов университета."
+                        img="4"
+                    />
+                    <ExhibitCard
+                        name="Макет ЯГТУ"
+                        text="Рукотворный макет, на котором показано плановое размещение корпусов университета."
+                        img="4"
+                    />
+                    <ExhibitCard
+                        name="Макет ЯГТУ"
+                        text="Рукотворный макет, на котором показано плановое размещение корпусов университета."
+                        img="4"
+                    />
                 </div>
             </div>
         </section>
