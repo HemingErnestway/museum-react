@@ -21,6 +21,7 @@ function Tour() {
                                 key={stand.heading}
                                 heading={stand.heading}
                                 text={stand.text}
+                                images={stand.images}
                             />
                         ))}
                     </div>
