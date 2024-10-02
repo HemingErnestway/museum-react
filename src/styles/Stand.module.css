@@ -1,0 +1,14 @@
+.stand {
+    background: #dde5f6;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #b1c7f6;
+}
+
+.heading {
+    font-size: 24px;
+}
+
+.text {
+    white-space: pre-line;
+}

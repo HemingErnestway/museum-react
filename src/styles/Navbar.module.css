@@ -4,8 +4,17 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background: white;
     border-bottom: 1px solid #d6deed;
+}
+
+.navbarBg {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: -1;
 }
 
 .navWrapper {
@@ -74,10 +83,14 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    /*z-index: 10;*/
 }
 
 @media screen and (width <= 990px) {
+    .navbar {
+        background: white;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -88,6 +101,15 @@
 
     .navLinks li {
         padding: 8px 0;
+    }
+
+    @keyframes slideDown {
+        from {
+            top: -100vh; /* Start off-screen */
+        }
+        to {
+            top: 80px; /* End position */
+        }
     }
 
     .open {
@@ -103,10 +125,13 @@
         align-items: center;
         width: 100vw;
         border-bottom: 1px solid #d6deed;
-        z-index: 20;
+        z-index: -2;
+        border-radius: 0 0 16px 16px;
+        animation: slideDown .3s ease;
     }
 
     .tint {
         display: block;
+        z-index: -3;
     }
 }

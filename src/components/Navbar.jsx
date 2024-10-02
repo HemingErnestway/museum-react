@@ -18,6 +18,8 @@ function Navbar() {
                      onClick={toggleMenu}>
                 </div>
 
+                <div className={styles.navbarBg}></div>
+
                 <ul className={`${styles.navLinks} ${isOpen && styles.open}`}>
                     <li><Link to="/" onClick={toggleMenu}>Главная</Link></li>
                     <li><Link to="/exhibits" onClick={toggleMenu}>Выставка</Link></li>
