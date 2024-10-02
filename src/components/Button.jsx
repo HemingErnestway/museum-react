@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/Button.module.css";
 
 function Button({ to, label, outlined = false }) {
-    let handleClick;
     const splitPath = to.split("/");
+    const navigate = useNavigate();
 
+    let handleClick;
     if (splitPath[splitPath.length - 1][0] === "#") {
         const sectionName = splitPath[splitPath.length - 1].substring(1);
         handleClick = () => {
@@ -13,7 +14,6 @@ function Button({ to, label, outlined = false }) {
             element?.scrollIntoView({ behavior: "smooth" });
         }
     } else {
-        const navigate = useNavigate();
         handleClick = () => {
             navigate(to);
         }
