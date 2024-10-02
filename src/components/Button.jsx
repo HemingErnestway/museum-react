@@ -3,11 +3,25 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/Button.module.css";
 
 function Button({ to, label, outlined = false }) {
-    const navigate = useNavigate();
+    let handleClick;
+    const splitPath = to.split("/");
+
+    if (splitPath[splitPath.length - 1][0] === "#") {
+        const sectionName = splitPath[splitPath.length - 1].substring(1);
+        handleClick = () => {
+            const element = document.getElementById(sectionName);
+            element?.scrollIntoView({ behavior: "smooth" });
+        }
+    } else {
+        const navigate = useNavigate();
+        handleClick = () => {
+            navigate(to);
+        }
+    }
 
     return (
         <button
-            onClick={() => navigate(to)}
+            onClick={handleClick}
             className={`${styles.base} ${outlined ? styles.outlined : styles.primary}`}
         >
             {label}
