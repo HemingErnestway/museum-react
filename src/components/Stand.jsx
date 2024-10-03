@@ -4,7 +4,7 @@ import styles from "../styles/Stand.module.css";
 
 function Stand({ heading, text, images, id }) {
     return (
-        <div className={styles.stand} id={id}>
+        <section className={styles.stand} id={id}>
             <div className={styles.content}>
                 <h1 className={styles.heading}>{heading}</h1>
                 <p className={styles.text}>
@@ -21,7 +21,7 @@ function Stand({ heading, text, images, id }) {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

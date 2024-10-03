@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "../styles/TourNavigation.module.css";
 
 function TourNavigation() {
@@ -11,14 +12,23 @@ function TourNavigation() {
         element?.scrollIntoView({ behavior: "smooth" });
     };
 
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleFoldMenu = () => setIsOpen(!isOpen);
+    const closeFoldMenu = () => setIsOpen(false);
+
     return (
         <div className={styles.navigation}>
-            {stands.map((stand) => (
-                <a key={stand}
-                   onClick={() => navigate(`Стенд-${stand}`)}
-                   className={styles.navLink}
-                >{stand}</a>
-            ))}
+            <div className={`${styles.foldMenu} `}>
+                <p>Перейти к стенду →</p>
+            </div>
+            <div className={`${styles.navLinks} ${isOpen && styles.open}`}>
+                {stands.map((stand) => (
+                    <a key={stand}
+                       onClick={() => navigate(`Стенд-${stand}`)}
+                       className={styles.navLink}
+                    >{stand}</a>
+                ))}
+            </div>
         </div>
     );
 }
