@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/TourNavigation.module.css";
+import HTMLReactParser from "html-react-parser";
 
 function TourNavigation() {
     const stands = [
@@ -14,20 +15,30 @@ function TourNavigation() {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleFoldMenu = () => setIsOpen(!isOpen);
-    const closeFoldMenu = () => setIsOpen(false);
 
     return (
         <div className={styles.navigation}>
-            <div className={`${styles.foldMenu} `}>
-                <p>Перейти к стенду →</p>
-            </div>
-            <div className={`${styles.navLinks} ${isOpen && styles.open}`}>
+            <div className={`${styles.navLinks}`}>
                 {stands.map((stand) => (
                     <a key={stand}
                        onClick={() => navigate(`Стенд-${stand}`)}
                        className={styles.navLink}
-                    >{stand}</a>
+                    >{HTMLReactParser(stand)}</a>
                 ))}
+            </div>
+
+            <div className={`${styles.foldMenu}`}
+                 onClick={toggleFoldMenu}
+            >
+                <p>Перейти к стенду →</p>
+                <div className={`${styles.foldMenuLinks} ${isOpen && styles.open}`}>
+                    {stands.map((stand) => (
+                        <a key={stand}
+                           onClick={() => navigate(`Стенд-${stand}`)}
+                           className={styles.navLink}
+                        >{stand}</a>
+                    ))}
+                </div>
             </div>
         </div>
     );

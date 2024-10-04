@@ -4,9 +4,11 @@
     padding: 8px;
     border: 1px solid #b1c7f6;
     margin-bottom: 16px;
-    position: sticky;
-    top: 92px;
+    position: fixed;
+    width: 90%;
+    bottom: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 189, 0.1);
+    max-width: 960px;
 }
 
 .navLinks {
@@ -33,18 +35,53 @@
     display: none;
 }
 
+.foldMenuLinks {
+    display: none;
+}
+
 @media screen and (width <= 920px) {
-    .navLinks {
-        display: none;
+    .navigation {
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     .foldMenu {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         cursor: pointer;
     }
 
-    .navigation:hover {
-        background: #dde5f6;
+    .navLinks {
+        display: none;
+    }
+
+    .open {
+        position: absolute;
+        bottom: 53px;
+        width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 189, 0.1);
+    }
+
+    .navLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+        background: #f9faff;
+        border: 1px solid #b1c7f6;
+        border-radius: 8px;
+    }
+
+    .navLink:first-child {
+        grid-column: span 2;
     }
 }
