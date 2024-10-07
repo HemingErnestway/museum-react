@@ -3,3 +3,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
+
+@media screen and (width <= 960px) {
+    .veteransContainer {
+        grid-template-columns: 1fr;
+    }
+}

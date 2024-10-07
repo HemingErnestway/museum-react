@@ -1,3 +1,9 @@
 .bar {
     display: flex;
+    align-items: center;
+    background: #f9faff;
+    border: 1px solid #b1c7f6;
+    border-radius: 8px;
+    width: fit-content;
+    flex-wrap: wrap;
 }

@@ -5,18 +5,18 @@ import MedalBar from "./MedalBar.jsx";
 function VeteranCard({ img, name, surname, years, medals, text }) {
     return (
         <div className={styles.card}>
-            <div>
+            <div className={styles.imageContainer}>
                 <img
                     src={`/veterans/${img}.png`}
                     alt={`${name} ${surname}`}
                     className={styles.image}
                 />
+                <p className={styles.years}>{years}</p>
             </div>
             <div className={styles.content}>
                 <h1 className={styles.name}>
                     {name} {surname}
                 </h1>
-                <p>{years}</p>
                 <MedalBar medals={medals} />
                 <p>{text}</p>
             </div>
