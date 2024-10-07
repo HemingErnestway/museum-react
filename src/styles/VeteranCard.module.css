@@ -1,0 +1,24 @@
+.card {
+    background: #dde5f6;
+    border-radius: 16px;
+    padding: 16px;
+    height: auto;
+    border: 1px solid #b1c7f6;
+    display: flex;
+    gap: 12px;
+}
+
+.content {
+
+}
+
+.name {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.image {
+    max-width: 160px;
+    border-radius: 8px;
+    border: 1px solid #b1c7f6;
+}

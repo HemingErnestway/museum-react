@@ -1,9 +1,9 @@
 import Header from "../components/Header.jsx";
 import Stand from "../components/Stand.jsx";
+import TourNavigation from "../components/TourNavigation.jsx";
 import styles from "../styles/Tour.module.css";
 
 import tourData from "/data/tour.json";
-import TourNavigation from "../components/TourNavigation.jsx";
 
 function Tour() {
     const stands = [
