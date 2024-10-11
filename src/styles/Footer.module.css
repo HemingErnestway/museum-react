@@ -1,0 +1,33 @@
+.footer {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #d6deed;
+    background: #f9faff;
+}
+
+.separator {
+    width: 100%;
+    border-bottom: 1px solid #b1c7f6;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 16px;
+    color: #284563;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (width <= 540px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+}

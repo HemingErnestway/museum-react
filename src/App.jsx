@@ -3,6 +3,7 @@ import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 import ScrollToTop from "./scrollToTop.js";
 
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 import Home from "./pages/Home.jsx";
 import Tour from "./pages/Tour.jsx";
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/veterans" element={<Veterans />}></Route>
                     <Route path="/documents" element={<Documents />}></Route>
                 </Routes>
+                <Footer />
             </div>
         </Router>
     );
