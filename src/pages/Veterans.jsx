@@ -28,6 +28,7 @@ function Veterans() {
                             />
                         ))}
                     </div>
+                    <p className={styles.annotation}>* Все даты жизни указаны на 2014 г.</p>
                 </div>
             </section>
 

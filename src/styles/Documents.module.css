@@ -1,0 +1,17 @@
+.imageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #b1c7f6;
+}
+
+@media screen and (width <= 660px) {
+    .imageContainer {
+        grid-template-columns: 1fr;
+    }
+}
