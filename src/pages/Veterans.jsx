@@ -30,6 +30,18 @@ function Veterans() {
                     </div>
                 </div>
             </section>
+
+            <section className={styles.cinema}>
+                <div className="wrapper">
+                    <h1 className="section-heading">Фильм «65 лет победы»</h1>
+                    <iframe
+                        className={styles.video}
+                        src="https://rutube.ru/play/embed/aff8c2b103027ee4defe94b67a648dcf"
+                        allow="clipboard-write; autoplay"
+                        allowFullScreen
+                    />
+                </div>
+            </section>
         </>
     );
 }
