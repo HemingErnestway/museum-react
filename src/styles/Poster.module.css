@@ -1,0 +1,40 @@
+.poster {
+    background: #dde5f6;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #b1c7f6;
+}
+
+.poster:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 189, 0.1);
+    background: #d2dbed;
+    cursor: pointer;
+}
+
+.footerText {
+    font-size: 14px;
+    line-height: 16px;
+    color: #284563;
+    padding-top: 2px;
+    padding-bottom: 8px;
+}
+
+.poster:hover .footerText {
+    color: #004fe1;
+}
+
+.image {
+    width: 100%;
+    border: 1px solid #b1c7f6;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
+}
+
+.heading {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}

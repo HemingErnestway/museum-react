@@ -1,5 +1,5 @@
 .card {
-    background: #dde5f6;
+    background: white;
     border-radius: 16px;
     padding: 16px;
     border: 1px solid #b1c7f6;
@@ -11,10 +11,3 @@
     border: 1px solid #b1c7f6;
 }
 
-.name {
-    font-size: 24px;
-}
-
-.description {
-
-}

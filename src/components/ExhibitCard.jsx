@@ -1,20 +1,20 @@
 import styles from "../styles/ExhibitCard.module.css";
 import PropTypes from "prop-types";
 
-function ExhibitCard({ name, text, img }) {
+function ExhibitCard({ img, name, description }) {
     return (
         <div className={styles.card}>
-            <img src={`/exhibits/${img}.png`} alt={name} className={styles.image} />
-            <h1 className={styles.heading}>{name}</h1>
-            <p>{text}</p>
+            <img src={img} alt={name} className={styles.image} />
+            <h1 className={styles.name}>{name}</h1>
+            <p className={styles.description}>{description}</p>
         </div>
     );
 }
 
 ExhibitCard.propTypes = {
-    name: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
 };
 
 export default ExhibitCard;

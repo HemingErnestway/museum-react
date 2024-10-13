@@ -1,0 +1,17 @@
+.gridContainer {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (width <= 780px) {
+    .gridContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (width <= 480px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+}
